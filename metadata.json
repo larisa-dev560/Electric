@@ -1,0 +1,6 @@
+{
+  "name": "Trinity Electric NY",
+  "description": "Licensed residential, commercial, and industrial electrical contractor in Woodside, NY. Top-tier electrical installations, emergency repairs, and maintenance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

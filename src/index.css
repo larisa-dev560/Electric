@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Poppins', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-primary-navy: #0D1B2A;
+  --color-electric-gold: #F5B700;
+  --color-accent-amber: #E09F00;
+  --color-brand-light: #F5F6F8;
+}
+
+:root {
+  --navy: #0D1B2A;
+  --gold: #F5B700;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1622;
+}
+::-webkit-scrollbar-thumb {
+  background: #233549;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5B700;
+}
+
+/* Electric animations & effects */
+@keyframes circuitFlow {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes electricPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px #F5B700);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 16px #F5B700) drop-shadow(0 0 30px #F5B700);
+  }
+}
+
+@keyframes sparkFlash {
+  0%, 93%, 98% {
+    opacity: 0;
+  }
+  94%, 97% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #F5B700);
+  }
+}
+
+@keyframes energyScan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(300%);
+  }
+}
+
+.animate-circuit-flow {
+  stroke-dasharray: 60 120;
+  animation: circuitFlow 18s linear infinite;
+}
+
+.animate-electric-pulse {
+  animation: electricPulse 3.5s ease-in-out infinite;
+}
+
+.animate-spark-flash {
+  animation: sparkFlash 6s ease-in-out infinite;
+}
+
+.animate-energy-scan {
+  animation: energyScan 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
